@@ -71,7 +71,7 @@ client.on('message', async (message) => {
         .setTitle(`**Stats:**`)
 
               .addField("⏳ Memory Usage", `\`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}/ ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB\``, true)
-              .addField("⌚️ Uptime ", `\`${duration}\``, true)
+              .addField("🕐 Uptime ", `\`${duration}\``, true)
               .addField("📁 Users", `\`${client.users.cache.size}\``, true)
               .addField("🚀 Servers", `\`${client.guilds.cache.size}\``, true)
              .addField("⏰ API Latency", `\`${client.ws.ping}ms\``, true)
@@ -112,7 +112,7 @@ client.on('message', async (message) => {
     if (message.content.startsWith('+dashboard')) {
         const embed = new MessageEmbed()
         .setDescription("**Your Dashboard**\nThere is currently `2` members in the bot!")
-.setImage('https://i.gifer.com/J4o.gif')
+.setImage('https://media.tenor.com/lvLaG5hPCncAAAAM/data-analysis.gif')
         .setColor("0")
 
         const y = new MessageButton()
@@ -125,6 +125,7 @@ client.on('message', async (message) => {
         message.channel.send({ component: row, embed: embed })
     }
 })
+
 //----------------EMBED-------------------
 
 
